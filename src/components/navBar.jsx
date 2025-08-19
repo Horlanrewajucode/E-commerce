@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "./logo";
-import Cart from "./cart";
 import Avatar from "./avatar";
+import CartImage from "./cartImage";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +48,7 @@ function NavBar() {
         </nav>
       </div>
       <div className="flex items-center gap-9 ">
-        <Cart />
+        <CartImage />
         <Avatar />
       </div>
     </header>

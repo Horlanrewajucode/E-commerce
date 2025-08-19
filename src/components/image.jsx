@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Image() {
+function ImageCarousel() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
@@ -23,25 +23,25 @@ function Image() {
   }
 
   return (
-    <div className="flex items-center">
+    <div className="relative flex items-center justify-center">
       <button
         onClick={handlePrev}
-        className="relative left-[45px] rounded-full p-3 bg-white cursor-pointer"
+        className="absolute left-2 rounded-full p-2 bg-white cursor-pointer z-10 md:hidden"
       >
         <img
           src="./icon-previous.svg"
           alt="icon-previous"
-          className="w-[600px] h-[200px]"
+          className=""
         />
       </button>
-      <img src={images[currentImage]} alt="Current-image" className="w-full object-contain" />
+      <img src={images[currentImage]} alt="Current-image" className="w-full object-contain md:w-40" />
       <button
         onClick={handleNext}
-        className="relative right-[65px] rounded-full p-2.5 bg-white cursor-pointer"
+        className="absolute right-2 z-10 rounded-full p-2 bg-white cursor-pointer md:hidden"
       >
-        <img src="./icon-next.svg" alt="icon-next" className="w-2 h-2" />
+        <img src="./icon-next.svg" alt="icon-next" className="" />
       </button>
     </div>
   );
 }
-export default Image;
+export default ImageCarousel;

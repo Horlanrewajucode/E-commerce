@@ -1,11 +1,11 @@
-import Image from "./components/image";
 import NavBar from "./components/navBar";
+import ProductGallery from "./components/ProductGallery";
 
 function App() {
   return (
     <div className="">
       <NavBar />
-      <Image/>
+      <ProductGallery/>
     </div>
   );
 }
