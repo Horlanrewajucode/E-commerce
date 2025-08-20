@@ -11,9 +11,9 @@ function ImagePreviewComponent() {
     const [selected, setSelected] = useState(0)
     const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center ">
       {/* Big Image */}
-      <div className="w-80 h-80 mb-4" onClick={() => setIsOpen(true)}>
+      <div className="w-100 h-100 mb-4" onClick={() => setIsOpen(true)}>
         <img
           src={images[selected]}
           alt="Product"
@@ -27,7 +27,7 @@ function ImagePreviewComponent() {
           <button
             key={index}
             onClick={() => setSelected(index)}
-            className={`w-20 h-20 rounded-lg overflow-hidden border-2 cursor-pointer 
+            className={`w-22 h-22 rounded-lg overflow-hidden border-2 cursor-pointer 
               ${
                 selected === index ? "border-orange-500" : "border-transparent"
               }`}

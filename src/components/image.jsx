@@ -31,10 +31,9 @@ function ImageCarousel() {
         <img
           src="./icon-previous.svg"
           alt="icon-previous"
-          className=""
         />
       </button>
-      <img src={images[currentImage]} alt="Current-image" className="w-full object-contain md:w-40" />
+      <img src={images[currentImage]} alt="Current-image" className="w-full object-contain mt-20" />
       <button
         onClick={handleNext}
         className="absolute right-2 z-10 rounded-full p-2 bg-white cursor-pointer md:hidden"
